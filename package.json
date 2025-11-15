@@ -1,10 +1,16 @@
 {
+  "homepage": "https://techwithpranjal.github.io/to-desktop-clone",
   "scripts": {
     "build:css": "npx @tailwindcss/cli -i ./src/input.css -o ./public/output.css",
-    "build": "npm run build:css"
+    "build": "npm run build:css",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d public"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.0.8",
     "tailwindcss": "^4.0.8"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
